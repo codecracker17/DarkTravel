@@ -1,28 +1,40 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-container fluid>
+    <v-row>
+      <v-col>
+        <TopBar></TopBar>
+      </v-col>
+    </v-row>
+    
+    <v-row>
+      <v-col>
+       <router-view></router-view>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+//import Country_Select from './components/Country_Select.vue';
+//import Artikel from "./components/Artikel.vue";
+//import Map from './components/Map.vue';
+import TopBar from "./components/TopBar.vue";
 
 export default {
-  name: 'App',
+  name: "App",
+
   components: {
-    HelloWorld
-  }
-}
+    TopBar
+  },
+
+  data: () => ({
+    //
+  }),
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+.Body{
+  margin-top: 10%;
+}  
 </style>
